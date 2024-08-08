@@ -26,14 +26,17 @@ ggpairs(diamonds)
 ```
 
 ```{r}
-#Create a basic ggplot scatterplot of diamond price (price) as a function of size (carat)
+# Create a basic ggplot scatterplot of diamond price (price) as a function of size (carat)
 ggplot(diamonds, mapping=aes(x=price, y=carat, color=cut))+
   geom_point()
 
-#Create a histogram showing the distribution of values in the carat column (recall: a histogram only requires a single variable, e.g. aes(x = carat))
+# Create a histogram showing the distribution of values in the carat column (recall: a histogram only requires a single variable, e.g. aes(x = carat))
 ggplot(diamonds, mapping = aes(x=carat, color=color)) +
   geom_histogram()
 
+# Create a boxplot (see: geom_boxplot) of diamond clarity (on the x-axis) and price (y-axis).
+ggplot(diamonds, mapping = aes(x=clarity, y=price, color=carat)) +
+  geom_boxplot()
 ```
 
 
