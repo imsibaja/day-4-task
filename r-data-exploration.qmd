@@ -31,7 +31,7 @@ ggplot(diamonds, mapping=aes(x=price, y=carat, color=cut))+
   geom_point()
 
 #Create a histogram showing the distribution of values in the carat column (recall: a histogram only requires a single variable, e.g. aes(x = carat))
-ggplot(diamonds, mapping = aes(x=carat, color=cut)) +
+ggplot(diamonds, mapping = aes(x=carat, color=color)) +
   geom_histogram()
 
 ```
